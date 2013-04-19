@@ -1,0 +1,14 @@
+window.app = angular.module('app', [])
+
+app.config(['$routeProvider','$locationProvider',
+  ($routeProvider, $locationProvider) ->
+    $locationProvider.html5Mode(true).hashPrefix('!')
+
+    $routeProvider
+      .when('/',
+        controller: "indexController",
+        templateUrl: "<%= asset_path 'index.html' %>"
+      ).otherwise(
+        redirectTo: '/'
+      )
+])
