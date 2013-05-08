@@ -39,7 +39,10 @@ class ApiController < ActionController::Metal
   respond_to :json
 
   ActiveSupport.run_load_hooks(:action_controller, self) # for serializers
-  ActiveModel::ArraySerializer.root = false
+
+  def default_serializer_options
+    { root: false }
+  end
 
 protected
 

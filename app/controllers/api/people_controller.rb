@@ -1,10 +1,10 @@
 class Api::PeopleController < ApiController
   def index
-    respond_with Person.all
+    respond_with Person.all, each_serializer: Api::PersonSerializer
   end
 
   def show
-    respond_with Person.find(params[:id])
+    respond_with Person.find(params[:id]), serializer: Api::PersonSerializer
   end
 
   def new
