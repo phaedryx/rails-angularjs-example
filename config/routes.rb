@@ -1,4 +1,7 @@
 RailsAngularjsExample::Application.routes.draw do
-  get "welcome/index"
   root to: 'welcome#index'
+
+  namespace :api do
+    resources :people
+  end
 end
