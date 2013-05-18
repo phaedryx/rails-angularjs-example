@@ -10,10 +10,10 @@
   </thead>
   <tbody>
     <tr ng-repeat="user in users | orderBy:['first_name', 'last_name']">
-      <td>{{ user.first_name }} {{ user.last_name }}</td>
+      <td><a href="/users/{{ user.id }}">{{ user.first_name }} {{ user.last_name }}</a></td>
       <td>{{ user.email }}</td>
       <td>{{ user.active }}</td>
-      <td>Edit</td>
+      <td><a href="/users/{{ user.id }}/edit">Edit</a></td>
       <td>Delete</td>
     </tr>
   </tbody>

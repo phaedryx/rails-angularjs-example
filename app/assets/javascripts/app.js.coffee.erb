@@ -6,8 +6,14 @@ App.config(['$routeProvider','$locationProvider',
 
     $routeProvider
       .when('/',
-        controller: "indexController",
+        controller: "indexController"
         templateUrl: "<%= asset_path 'index.html' %>"
+      ).when('/users/:id',
+        controller: 'showController'
+        templateUrl: "<%= asset_path 'show.html' %>"
+      ).when('/users/:id/edit',
+        controller: 'editController'
+        templateUrl: "<%= asset_path 'edit.html' %>"
       ).otherwise(
         redirectTo: '/'
       )
