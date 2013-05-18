@@ -28,5 +28,6 @@ first_names.each do |fn|
       phone: "#{rand(2..9)}#{rand(0..9)}#{rand(0..9)}-#{rand(0..9)}#{rand(0..9)}#{rand(0..9)}#{rand(0..9)}",
       state: states.sample,
       active: [true,true,true,false].sample)
+    )
   end
 end

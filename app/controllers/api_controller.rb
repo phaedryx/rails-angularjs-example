@@ -1,4 +1,3 @@
-# include the same modules as rails-api
 class ApiController < ActionController::Metal
   include ActionController::Helpers
   include ActionController::HideActions
@@ -31,7 +30,7 @@ class ApiController < ActionController::Metal
     def helper(*); end
   end
 
-  extend  ApiCompatibilityMethods
+  extend ApiCompatibilityMethods
 
   before_filter { request.format = 'json' }
   after_filter { cookies['XSRF-TOKEN'] = form_authenticity_token }

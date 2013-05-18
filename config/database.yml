@@ -2,6 +2,7 @@ development:
   adapter: postgresql
   encoding: unicode
   database: rails-angularjs-example_development
+  host: localhost
   pool: 5
   username: development
   password: development
@@ -10,6 +11,7 @@ test:
   adapter: postgresql
   encoding: unicode
   database: rails-angularjs-example_test
+  host: localhost
   pool: 5
   username: development
   password: development

@@ -103,7 +103,11 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+<<<<<<< HEAD
   active_model_serializers
+=======
+  active_model_serializers (~> 0.7.0)
+>>>>>>> e3fe033cd73303396b9dee67ed53915b222a9091
   coffee-rails (~> 3.2.1)
   pg
   rails (= 3.2.13)
