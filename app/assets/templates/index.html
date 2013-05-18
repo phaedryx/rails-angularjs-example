@@ -13,8 +13,8 @@
       <td><a href="/users/{{ user.id }}">{{ user.first_name }} {{ user.last_name }}</a></td>
       <td>{{ user.email }}</td>
       <td>{{ user.active }}</td>
-      <td><a href="/users/{{ user.id }}/edit">Edit</a></td>
-      <td>Delete</td>
+      <td><a href="/users/{{ user.id }}/edit" class="btn btn-primary">Edit</a></td>
+      <td><a class="btn btn-danger">Delete</a></td>
     </tr>
   </tbody>
 </table>
