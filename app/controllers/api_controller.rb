@@ -13,7 +13,7 @@ class ApiController < ActionController::Metal
   include ActionController::ParamsWrapper
   include ActionController::Instrumentation
 
-  module ApiCompatibilityMethods
+  module CompatibilityMethods
     def cache_store; end
     def cache_store=(*); end
     def assets_dir=(*); end
@@ -30,7 +30,7 @@ class ApiController < ActionController::Metal
     def helper(*); end
   end
 
-  extend ApiCompatibilityMethods
+  extend CompatibilityMethods
 
   before_filter { request.format = 'json' }
   after_filter { cookies['XSRF-TOKEN'] = form_authenticity_token }
