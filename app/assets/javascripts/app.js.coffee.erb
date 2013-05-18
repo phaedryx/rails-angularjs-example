@@ -1,6 +1,6 @@
-window.app = angular.module('app', [])
+window.App = angular.module('app', ['ngResource'])
 
-app.config(['$routeProvider','$locationProvider',
+App.config(['$routeProvider','$locationProvider',
   ($routeProvider, $locationProvider) ->
     $locationProvider.html5Mode(true).hashPrefix('!')
 

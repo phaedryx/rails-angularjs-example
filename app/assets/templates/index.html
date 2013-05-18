@@ -1,1 +1,22 @@
-<h1>Welcome</h1>
+<table class='table'>
+  <thead>
+    <tr>
+      <td>First Name</td>
+      <td>Last Name</td>
+      <td>Email Address</td>
+      <td>Active</td>
+      <td></td>
+      <td></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="user in users | orderBy:['first_name','last_name']">
+      <td>{{ user.first_name }}</td>
+      <td>{{ user.last_name }}</td>
+      <td>{{ user.email }}</td>
+      <td>{{ user.active }}</td>
+      <td>Edit</td>
+      <td>Delete</td>
+    </tr>
+  </tbody>
+</table>
