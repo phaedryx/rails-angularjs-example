@@ -1,3 +1,5 @@
-App.controller('indexController', ['$scope', 'User', ($scope,User) ->
-  $scope.users = User.query()
+App.controller('indexController', [
+  '$scope', 'User',
+  ($scope, User) ->
+    $scope.users = User.query()
 ])
