@@ -1,8 +1,7 @@
 <table class='table table-bordered table-striped'>
   <thead>
     <tr>
-      <th>First Name</th>
-      <th>Last Name</th>
+      <th>Name</th>
       <th>Email Address</th>
       <th>Active</th>
       <th></th>
@@ -10,9 +9,8 @@
     </tr>
   </thead>
   <tbody>
-    <tr ng-repeat="user in users | orderBy:['first_name','last_name']">
-      <td>{{ user.first_name }}</td>
-      <td>{{ user.last_name }}</td>
+    <tr ng-repeat="user in users | orderBy:['first_name', 'last_name']">
+      <td>{{ user.first_name }} {{ user.last_name }}</td>
       <td>{{ user.email }}</td>
       <td>{{ user.active }}</td>
       <td>Edit</td>
