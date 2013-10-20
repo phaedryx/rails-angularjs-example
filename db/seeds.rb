@@ -27,7 +27,7 @@ first_names.each do |fn|
       email: "#{fn.downcase}.#{ln.downcase}@#{ln.downcase}.com",
       phone: "#{rand(2..9)}#{rand(0..9)}#{rand(0..9)}-#{rand(0..9)}#{rand(0..9)}#{rand(0..9)}#{rand(0..9)}",
       state: states.sample,
-      active: [true,true,true,false].sample)
+      active: [true,true,true,false].sample
     )
   end
 end
